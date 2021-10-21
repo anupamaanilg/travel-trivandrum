@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    {% extends "base.html" %}
+    {% block body_block %}
+    <div class="indimg">
+      <div class="indimg1">
+        <h1 style="margin:0;">TRIVIAN TRAVELLER</h1>
+        <h4 class="indt1">Welcome to The City of Lord Ananta</h4>
+      </div>
+    </div>
+    <div class="indintro">
+      <div class="indintro1">
+        <p class="indp">WELCOME TO TRIVIAN TRAVEL BLOG</p>
+        <P class="indp1">Hello.. This blog is actually for giving you a small idea about my own place, capital city of 'Gods Own Country', Thiruvananthapuram.
+        It is built on seven hills by the seashore near the southern tip of mainland India. The city is on the west coast of India. </P>
+      </div>
+    </div>
+
+    <div>
+      <div class="indintro1">
+        <p class="indp">Type of Places You Want to Travel</p>
+      </div>
+    </div>
+
+      <div class="plc">
+        <div class="plc1">
+          <div>
+            <ul style="list-style-type: none;">
+              <div><li class="lis1 ls">
+                <div><div class="ls1">
+                  <p style="margin:0;">HILL STATION</p>
+                </div></div>
+              </li></div>
+              <div><li class="lis2 ls">
+                <div class="ls1">
+                  <p style="margin:0;">BEACH</p>
+                </div>
+              </li></div>
+              <div><li class="lis3 ls">
+                <div class="ls1">
+                  <p style="margin:0;">TEMPLE</p>
+                </div>
+              </li></div>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+  <div class="mine">
+  <div class="mine1">
+    <div align="right">
+      <center><img class="mineimg" src="media/mine1.jpg"/></center>
+    </div>
+  </div>
+  <div class="mine3" align="right">
+    <p class="min">Hi All.. I am ANUPAMA ANILKUMAR</p>
+    <p class="min1">I am a typical malayalee, from the soil of Anantha Padmanabhan(Trivandrum).
+    My country is rich in ancient temples, cultural sites, beaches and valleys.
+  I started this blog to introduce you all to this.</p>
+
+  </div>
+  </div>
+
+  {% if access_index %}
+  <div class="prop">
+    <div class="prop1">
+      <div class="prop2">
+
+        <div class="prop3">
+          <div class="pro5"><div class="pro7"><p class="post">LATEST POSTS</p></div>
+          </div>
+          <div></div>
+          {% for acc in access_index %}
+          {% if forloop.counter < 4 %}
+          <div class="pro4" style="width: 400px;">
+            <div style="float:left;">{{ acc.title|capfirst }}</div>
+            <div style="margin: 0 1% 1% 77%;">{{ acc.post_date }}</div>
+          </div>
+          {% endif %}
+            {% endfor%}
+        </div>
+        <div class="prop3">
+          <div class="pro5"><div class="pro7"><p class="post">LATEST POSTS</p></div>
+          </div>
+          {% for acc in access_index %}
+          {% if forloop.counter > 3 %}
+          <div class="pro4" style="width: 400px;">
+            <div style="float:left;">{{ acc.title|capfirst }}</div>
+            <div style="margin: 0 1% 1% 77%;">{{ acc.post_date }}</div>
+          </div>
+          {% endif %}
+            {% endfor%}
+        </div>
+
+        </div>
+
+      </div>
+  </div>
+  {% endif %}
+<!--  <div class="ftr">
+</div>-->
+{% endblock %}

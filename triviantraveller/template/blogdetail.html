@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+    {% extends "base.html" %}
+    {% load static %}
+
+    {% block body_block %}
+    {% if access_blog %}
+
+        <div class="det1">
+          {% for acc in access_imgli %}
+            {% if forloop.counter < 4 %}
+          <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="../media/{{acc.imagepath}}" style="width:100%; height:393px;">
+          </div>
+          </div>
+          <br>
+          {% endif %}
+          {% endfor %}
+          <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        <!--  <div class="blode"><img src="../media/{{acc.imagepath}}" class="imgdet"/></div>-->
+          <div class="det2">
+            <p style="color: #009688;">{{ access_blog.place }}</p>
+            <p class="det3">{{ access_blog.title|capfirst }}</p>
+            <p style="color: #009688;">{{ access_blog.post_date }}</p>
+            </div>
+            <div style="margin: 0 2%;"><hr>
+            <div class="hr"><center>
+              <a href="#">---</a>
+                  <a href="https://www.facebook.com/kuttu.anil">
+                  <i class="fa fa-facebook"></i></a>
+                  <a href="https://www.linkedin.com/">
+                  <i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.instagram.com/">
+                  <i class="fa fa-instagram"></i></a>
+                  <a href="https://www.twitter.com/">
+                  <i class="fa fa-twitter"></i></a>
+                  <a href="https://www.pinterest.com/">
+                  <i class="fa fa-pinterest"></i></a>
+                  <a href="#">---</a>
+                  </center>
+                </div>
+                <hr>
+                </div>
+                <p class="detail">{{ access_blog.details }}</p>
+
+
+              {% if access_hotli %}
+                  <h2 class="hh">NEAREST HOTELS</h2>
+              {% for ach in access_hotli %}
+              <div class="ht1" style="width:92%;">
+                <div class="h5">
+                  <img src="../media/{{ach.images}}" style="width: 100%;">
+              </div>
+              <div class="h6">
+                <div class="h7" style="padding: 0 3%;">
+                  <p class="head">{{ ach.hotel_name|capfirst }}</p>
+                  <p class="head1">{{ ach.details }}</p>
+                </div>
+              </div>
+              <div class="h8">
+              <div class="h9"  style="padding: 0 3%;" >Distance from {{access_blog.title}} - {{ ach.distance_from_place }}<br>
+              Rating - {{ ach.rating }}</div>
+              </div>
+              </div>
+
+              {% endfor %}
+              {% endif %}
+
+  <div class="prop">
+      <div class="prop11">
+        <div class="prop2">
+          <div class="form2">
+            <form action="{% url 'southkerala:comments' %}" enctype="multipart/form-data" method="post">
+              {% csrf_token %}
+              <div class="reg">
+                <h2 class="h2">YOUR COMMENTS</h2>
+                <div class="reg1">
+
+                  <div class="reg2">
+                    <div class="reg3">
+                      <input class="formin" name="name" placeholder="Your Name" required type="text" value="{{name}}">
+                    </div>
+                  </div>
+
+                  <div class="reg2">
+                    <div class="reg3">
+                      <input class="formin" name="email" placeholder="Email" required type="email" value="{{email_id}}">
+                    </div>
+                  </div>
+
+                  <div class="reg2">
+                    <div class="reg3">
+                      <textarea class="formin" name="comment" placeholder="What would you like to know?" value="{{comment}}"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="reg2">
+                    <div class="reg3">
+                      <input type="hidden" name="blog_id" value="{{access_blog.blog_id}}">
+                      <button class="button" name="enquiry" type="submit">Submit</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form1">
+                <div class="prop12"><p class="min" style="font-size:20px;color: #009688;">LATEST COMMENTS RELATED TO THIS...</p></div>
+                {% if access_com %}
+                {% for ach in access_com %}
+                {% if forloop.counter < 4 %}
+                    <div class="ht1" style="width:92%;">
+                    <div class="h6">
+                      <div class="h7" style="padding: 0 3%;">
+                        <p class="head" style="color: #59b102;font-size: 146%;">{{ ach.comment |capfirst }}</p>
+                        <p class="com1">{{ ach.name |capfirst }}</p>
+                        <p class="com1">{{ ach.date }}</p>
+                      </div>
+                    </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                {% else %}
+                <p>No One Comment Yet.....</p>
+                {% endif %}
+
+          </div>
+
+          </div></div></div>
+        </div>
+
+      {% endif %}
+<script type="text/javascript" src="{% static 'style.js' %}"></script>
+    {% endblock %}

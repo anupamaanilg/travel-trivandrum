@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    {% extends "base.html" %}
+    {% block body_block %}
+
+<div class="con">
+<div class="prop11">
+<div class="prop2">
+<p class="indp">YOUR SUGGESIONS & ENQUIRIES..</p>
+<div class="form2">
+<center>  <form action="{% url 'southkerala:suggesions' %}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="reg">
+      <h2 class="h2">YOUR SUGGESIONS</h2>
+      <div class="reg1">
+
+        <div class="reg2">
+          <div class="reg3">
+            <input class="formin" name="name" placeholder="Your Name" required type="text" value="{{name}}">
+          </div>
+        </div>
+        <div class="reg2">
+          <div class="reg3">
+            <textarea class="formin" name="suggesion" required placeholder="Your suggesions please.." value="{{suggesion}}"></textarea>
+          </div>
+        </div>
+        <div class="reg2">
+          <div class="reg3">
+            <button class="button" name="suggn" type="submit">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form></center>
+</div>
+<!--<div class="form2">
+  <form action="{% url 'southkerala:suggesions' %}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+<div class="reg">
+  <h2 class="h2">YOUR ENQUIRIES</h2>
+  <div class="reg1">
+
+    <div class="reg2">
+      <div class="reg3">
+        <input class="formin" name="uname" placeholder="Your Name" required type="text" value="{{uname}}">
+      </div>
+    </div>
+    <div class="reg2">
+      <div class="reg3">
+        <input class="formin" name="email" placeholder="Email" required type="email" value="{{email_id}}">
+      </div>
+    </div>
+    <div class="reg2">
+      <div class="reg3">
+        <textarea class="formin" name="enquiry" required placeholder="what you want to know.." value="{{enquiry}}"></textarea>
+      </div>
+    </div>
+    <div class="reg2">
+      <div class="reg3">
+        <button class="button" name="enq" type="submit">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</form>
+</div>-->
+</div></div></div>
+
+    {% endblock %}

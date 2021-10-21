@@ -1,0 +1,559 @@
+body {
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.base1 a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 1% 2% 1% 2%;
+    margin: 0 3% 0 10%;
+    text-decoration: none;
+    font-size: 20px;
+}
+.base1 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.header {
+  /*margin: 0 8% 0 8%;*/
+}
+.top {
+  overflow: hidden;
+  background: #000000;
+    padding: 1% 1% 1% 1%;;
+}
+.top a {
+  height: 26px;
+    width: 26px;
+    text-align: center;
+    line-height: 25px;
+    padding: .5%;
+    margin: 0;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.top a:hover {
+  color: red;
+}
+
+.top-right {
+  float: right;
+  max-width: 50%;
+}
+.img1 {
+  margin-top: 1%;
+    width: 100%;
+    height: 600px;
+}
+.indimg {
+  background: url("/static/kovalam1.jpg") no-repeat;
+  background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin-top: 1.5%;
+}
+.indimg1 {
+  width: 100%;
+text-align: center;
+margin: 0 auto;
+padding: 15% 0;
+float: right;
+color: #458B00;
+font-size: 300%;
+font-family: "Times New Roman", Times, serif;
+}
+.indt1 {
+  margin:0;
+  font-family: Bradley Hand, cursive;
+}
+.topm {
+    margin-top: 1%;
+    text-decoration: none;
+    font-family: Arial Narrow;
+}
+.topm a {
+    font-family: "Poppins";
+    color: #418300;
+    display: inline-block;
+    margin: 0 1% 0 3.8%;
+    font-size: 20px;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.topm a:hover {
+  color: red;
+}
+.indintro {
+  width: 94%;
+    margin: 0 3% 0 3%;
+    box-shadow: rgb(50 50 93 / 25%) 0px 47px 92px 15px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+.indintro1 {
+  margin: 1%;
+  padding: 1%;
+}
+.indp {
+  text-align: center;
+    font: italic small-caps bold 30px Bradley Hand, cursive;
+    color:#59b102;
+    margin-bottom: 0;
+}
+.indp1 {
+  text-align: center;
+  font: bold 20px Didot, serif;
+color: #7c7c7c;
+  margin: 2% 10%;
+}
+.plc {
+
+}
+.plc1 {
+
+}
+li {
+  width: 25%;
+      height: 200px;
+      float: left;
+      cursor: pointer;
+      margin: 2%;
+}
+.lis1 {
+  background: url("/static/hill.jpg") no-repeat;
+}
+.lis2 {
+  background: url("/static/beach.jpg") no-repeat;
+}
+.lis3 {
+  background: url("/static/temple.jpg") no-repeat;
+}
+.ls {
+  -webkit-filter: blur(3px);
+	filter: blur(2px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.ls:hover {
+  -webkit-filter: blur(0);
+	filter: blur(0);
+}
+.ls1 {
+  text-align: center;
+  margin: 25%;
+  color: #ffff;
+  font-size: 30px;
+  font-family: Bradley Hand, cursive;
+}
+.mine {
+    width: 100%;
+    height: 450px;
+    float: left;
+    border: none;
+    margin: 6% 1% 2% 1%;
+}
+.mine1 {
+    width: 50%;
+    height: 366px;
+    float: left;
+    margin: 0px 10px;
+}
+  .mine2 {
+    float: left;
+  }
+  .mineimg {
+    width: 50%;
+    height: 400px;
+    box-shadow: 0px 0px 20px 3px;
+      border-radius: 1px;
+
+  }
+  .mine3 {
+      border: none;
+      height: 341px;
+      float: left;
+      width: 45%;
+      color: #0f0b0b;
+      font-size: 22px;
+      text-align: center;
+  }
+.min {
+    text-align: center;
+    font: italic bold 30px Bradley Hand, cursive;
+    color:#59b102;
+    margin-bottom: 0;
+}
+.min1 {
+  color: #1B1B1B;
+    font-family: "Georgia", Sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 20px 100px 20px 20px;
+    line-height: 1.8em;
+    text-align: justify;
+}
+.ftr {
+  width: 100%;
+    height: 45px;
+    float: left;
+    background: #2f2f2f;
+}
+.prop {
+  width: 100%;
+    height: auto;
+    float: left;
+}
+.prop1 {
+  width: 970px;
+    height: auto;
+    margin: 10px auto;
+}
+.prop2 {
+  width: 100%;
+    height: 387px;
+    float: left;
+}
+.prop3 {
+  width: 50%;
+    float: left;
+    border-radius: 4%;
+      box-shadow: 0px 0px 17px -4px;
+      height: 315px;
+}
+.pro4 {
+  margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 2%;
+}
+.pro5 {
+      border: 4px solid white;
+}
+.pro6 {
+  height: 15px;
+border: 1px solid green;
+}
+.pro7 {
+  margin: 1% 2% 1% 3%;
+    padding: 1% 2% 1% 2%;
+    /* border: 2px solid #000000; */
+    box-shadow: 18%;
+    box-shadow: 0px 0px 12px 2px;
+}
+.blog1 {
+  margin-top: 5%;
+font-size: 30px;
+  color: #59b102;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.blo1 {
+  padding: 7%;
+      cursor: pointer;
+      border-radius: 16px;
+      box-shadow: inset 0 0 10px;
+}
+.blo2 {
+
+}
+.blo3 {
+  text-align: center;
+}
+.imgblo {
+  width:100%;
+  height: 110px;
+}
+.p1 {
+  font-size: 20px;
+    color: #908e8e;
+    font-weight: bold;
+    color: var(--pcheading-cl);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.p2 {
+  text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}
+.butt1 {
+      padding: 9% 5% 9% 7%;
+    border: none;
+    background: #ffffff;
+    font: bold 17px Georgia, serif;
+    cursor: pointer;
+}
+.butt2 {
+  border: none;
+    background: #ffffff;
+    cursor: pointer;
+    font-size: 29px;
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.imgdet {
+  width: 100%;
+    height: 420px;
+    margin-top: 2%;
+}
+.hr {
+  overflow: hidden;
+}
+.hr a {
+  height: 26px;
+    width: 26px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 25px;
+    padding: .5%;
+    margin: 0;
+    color: #009688;
+    transition: all 0.3s ease-in-out;
+}
+.hr a:hover {
+  color: red;
+}
+.h2 {
+  text-align: center;
+    color: #009688;
+}
+.reg {
+  margin: 5% 20% 2% 20%;
+}
+.reg1 {
+  display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.reg2 {
+  flex: 0 0 100%;
+    max-width: 100%;
+}
+.reg3 {
+  margin-bottom: 25px;
+}
+
+.formin {
+  display: block;
+      line-height: 2.5;
+      width: 97%;
+      padding: .5% 0 .5% 2%;
+      border: 1px solid #ced4da;
+}
+.button {
+  background-color: #a5a5a5f5;
+    width: 170px;
+    margin-left: 77%;
+    color: #009688;
+    height: 56px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.det2 {
+  text-align: center;
+}
+.det3 {
+  font-size: 35px;
+    color: #908e8e;
+    margin: 0;
+    font-weight: bold;
+    color: var(--pcheading-cl);
+    text-transform: uppercase;
+}
+.detail {
+  margin: 5% 2%;
+}
+.blode {
+  margin: 2% 32% 2% 32%;
+}
+.bord {
+  color: black;
+    display: inline-block;
+    margin: 2% 4% 2% 4%;
+    cursor: pointer;
+        width: 20%;
+}
+
+
+.h5 {
+  width: 24%;
+    border-left: 1px solid #dcdcdc;
+    float: left;
+}
+.h6 {
+  width: 610px;
+    height: auto;
+    float: left;
+}
+.h7 {
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    color: #585a5b;
+    line-height: 18px;
+}
+.h8 {
+  width: 730px;
+    height: auto;
+    float: left;
+    margin: 10px 0;
+}
+.h9 {
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    color: #585a5b;
+    line-height: 18px;
+    font-weight: bold;
+}
+.ht1 {
+  height: auto;
+    float: left;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 2% 2% 2% 2%;
+    margin: 10px 1% 1% 3%;
+}
+.hh {
+  text-align: left;
+  color: #009688;
+  margin-bottom: 0;
+  margin-left: 4%;
+}
+.head {
+  color: #009688;
+    font-size: 190%;
+    margin: 0;
+}
+.head1 {
+  font-size: 114%;
+}
+.form1 {
+  width: 38%;
+    float: left;
+    height: 387px;
+    padding: 1% 10px 0;
+    border-radius: 5%;
+    box-shadow: inset 0 0 50px;
+}
+.form2 {
+  width: 60%;
+    float: left;
+    height: 387px;
+}
+.prop11 {
+  width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+.prop12 {
+    margin: 1% 1% 0 1%;
+}
+.com1 {
+  font-size: 114%;
+  margin: 1% 0 0 45%;
+}
+.post {
+  margin-left: 3%;
+    color: #59b102;
+    font: italic bold 13px Bradley Hand, cursive;
+}
+.about {
+  text-align: justify;
+      font: bold 20px Didot, serif;
+      color: #7c7c7c;
+      margin: 2% 10%;
+}
+/*........................................................*/
+
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.dest1 {
+      border: 4px solid white;
+}
+.dest2 {
+  margin: 1% 2% 1% 3%;
+    padding: 1% 2% 1% 2%;
+    box-shadow: 0px 0px 22px -8px;
+      border-radius: 32px;
+}
+.con {
+  height: auto;
+    float: left;
+  width: 94%;
+    margin: 3% 3% 0 3%;
+    box-shadow: rgb(50 50 93 / 25%) 0px 47px 92px 15px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}

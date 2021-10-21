@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    {% extends "base.html" %}
+    {% block body_block %}
+    <div><h1 class="blog1">MY LATEST POSTS</h1></div>
+      {% if access_records %}
+
+          {% for acc in access_records %}
+          <div class="bord">
+          <div class="blo1">
+            <form action="{% url 'southkerala:blogdetail' %}" enctype="multipart/form-data" method="post">
+            <div class="blo2">
+              {% for ac in access_img  %}
+                {% if acc == ac.blog_id %}
+                <img src="../media/{{ac.imagepath}}" class="imgblo"/>
+                {{ "<!--" }}
+                {% endif %}
+              {% endfor %}
+              {{ "-->" }}
+              <div class="blo3"><p style="color: #009688;">{{ acc.place }}</p>
+                <p class="p1">{{ acc.title|capfirst }}</p>
+                <p style="color: #009688;font-size: 12px;">{{ acc.post_date }}</p>
+                <p class="p2">{{ acc.details }}</p>
+                  {% csrf_token %}
+                  <input type="hidden" name="blog_id" value="{{acc.blog_id}}">
+                  <div class="butt1">
+                    <!--<i class="fa fa-hand-o-right" aria-hidden="true"></i>-->
+                    <input type="submit" value="&#xf0a4;" style="color:#009688;" class="butt2"/>
+                  </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      {% endif %}
+
+
+    {% endblock %}

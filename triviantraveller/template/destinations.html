@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    {% extends "base.html" %}
+    {% block body_block %}
+    <div class="indintro">
+      <div class="indintro1">
+
+        <p class="indp">PLACE TO VISIT IN THIRUVANANTHAPURAM</p>
+        {% for acc in access_index %}
+        <div class="dest1"><div class="dest2"><P class="about">{{ acc.title|capfirst }}</p></div>
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    {% endblock %}

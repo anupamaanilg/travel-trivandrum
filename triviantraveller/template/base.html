@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="top">
+            <a href="https://www.facebook.com/kuttu.anil">
+            <i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/anupamaanilg/">
+            <i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/">
+            <i class="fa fa-instagram"></i></a>
+            <a href="https://www.twitter.com/">
+            <i class="fa fa-twitter"></i></a>
+            <a href="https://www.pinterest.com/">
+            <i class="fa fa-pinterest"></i></a>
+            <div class="top-right">
+              <!--<i class="fa fa-phone" style="font-size:24px">-->
+              <a href="tel:+918089904783">8089904783</a>
+              <a href="mailto:anupamaanilg@gmail.com">anupamaanilg@gmail.com</a>
+            </div>
+          </div>
+          <!--<hr style="margin-top: 3%;">-->
+        </header>
+    <div class="topm">
+      <!--<a href="{% url 'southkerala:index' %}">Home</a>-->
+      <a href="{% url 'southkerala:index' %}">
+      <i class="fa fa-home"></i>
+      <a href="{% url 'southkerala:about' %}">About</a>
+      <a href={% url 'southkerala:blog' %}>Latest Blog</a>
+      <a href="{% url 'southkerala:destinations' %}">Destinations</a>
+      <a href="{% url 'southkerala:tips' %}">Tips</a>
+      <a href="{% url 'southkerala:suggesions' %}">Contact</a>
+    </div>
+      {% block body_block %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
